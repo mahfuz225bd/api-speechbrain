@@ -20,3 +20,7 @@ def transcribe_audio():
     except Exception as e:
         app.logger.error(f"Error transcribing audio: {e}")
         return jsonify({"error": str(e)}), 500
+
+@app.route('/test', methods=['POST'])
+def test():
+    return "This is a test route."
